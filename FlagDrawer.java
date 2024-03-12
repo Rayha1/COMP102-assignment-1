@@ -107,8 +107,23 @@ public class FlagDrawer{
      * Draw the Misubishi Logo.
      */
     public void drawMitsubishiLogo() {
-        /*# YOUR CODE HERE */
-
+        UI.clearGraphics();  
+        UI.println("Mitsubushi Electric~");
+        double width = UI.askDouble("How wide: ");
+        //red
+        UI.setColor(Color.red);
+        UI.fillRect(LEFT, TOP, width, width);
+        //outside
+        UI.setColor(Color.white);
+        UI.fillArc(LEFT - width, TOP - width, width * 4, width * 4, 90, 30);
+        UI.fillArc(LEFT - width * 2, TOP - width, width * 4, width * 4, 60, 30);
+        //inside
+        UI.fillArc(LEFT, TOP + width/5, width, width, 0, 45);
+        UI.fillArc(LEFT, TOP + width/5, width, width, 135, 45);
+        UI.fillArc(LEFT, TOP + width/5, width, width, 247.5, 45);
+        
+        
+        
     }
 
     /**   CHALLENGE
